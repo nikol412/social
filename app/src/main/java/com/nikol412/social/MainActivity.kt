@@ -1,8 +1,9 @@
-package com.example.social
+package com.nikol412.social
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.social.ui.main.MainFragment
+import com.example.social.R
+import com.nikol412.social.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

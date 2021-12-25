@@ -1,4 +1,4 @@
-package com.example.social
+package com.nikol412.social
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

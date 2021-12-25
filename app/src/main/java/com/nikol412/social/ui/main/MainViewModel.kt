@@ -1,4 +1,4 @@
-package com.example.social.ui.main
+package com.nikol412.social.ui.main
 
 import androidx.lifecycle.ViewModel
 
