@@ -1,8 +1,7 @@
 package com.nikol412.social
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.social.R
+import androidx.appcompat.app.AppCompatActivity
 import com.nikol412.social.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, MainFragment())
                     .commitNow()
         }
     }
