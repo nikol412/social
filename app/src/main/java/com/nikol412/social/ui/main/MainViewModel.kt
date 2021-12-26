@@ -16,9 +16,13 @@ class MainViewModel : BaseViewModel() {
 
     init {
         viewModelScope.launch(Dispatchers.Default) {
-            val posts = withContext(Dispatchers.IO) { api.getPosts() }
+            try {
+                val posts = withContext(Dispatchers.IO) { api.getPosts() }
+                postsLD.value = posts
 
-            postsLD.value = posts
+            } catch (e: Exception) {
+            }
+
         }
     }
 }
