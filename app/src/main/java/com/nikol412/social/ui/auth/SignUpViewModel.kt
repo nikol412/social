@@ -15,6 +15,7 @@ class SignUpViewModel : BaseViewModel() {
     val login = MutableLiveData<String>()
     val password = MutableLiveData<String>()
     val email = MutableLiveData("")
+
     val api by lazy { API.apiService }
 
     fun onSignUpClick() {

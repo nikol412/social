@@ -13,7 +13,8 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>(FragmentSignUpBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
     }
 
     override fun subscribeToObservables() {

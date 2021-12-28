@@ -24,6 +24,7 @@ abstract class BaseFragment<VB : ViewBinding>(
         super.onCreate(savedInstanceState)
         viewModel.navController = findNavController()
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

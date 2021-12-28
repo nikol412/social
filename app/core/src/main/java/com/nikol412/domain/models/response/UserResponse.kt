@@ -1,5 +1,7 @@
 package com.nikol412.domain.models.response
 
+import com.google.gson.annotations.SerializedName
+
 data class UserResponse(
     val id: String,
     val email: String,
@@ -9,4 +11,9 @@ data class UserResponse(
     val username: String,
     val created_at: String,
     val updated_at: String
+)
+
+data class LoginResponse(
+    @SerializedName("access_token")
+    val accessToken: String
 )
