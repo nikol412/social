@@ -20,6 +20,10 @@ abstract class BaseFragment<VB : ViewBinding>(
 
     abstract val viewModel: BaseViewModel
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.navController = findNavController()
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
