@@ -17,9 +17,7 @@ class MainFragment : BaseFragment<MainFragmentBinding>(MainFragmentBinding::infl
     }
 
     override fun subscribeToObservables() {
-        viewModel.postsLD.observe(viewLifecycleOwner) {
-            binding.message.text = it.firstOrNull()?.text
-        }
+
     }
 
 }

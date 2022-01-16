@@ -24,18 +24,35 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/text_layout_login"
+            app:layout_constraintBottom_toTopOf="@id/text_layout_email"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="@string/email"
+            app:layout_constraintBottom_toTopOf="@id/text_layout_login"
+            app:layout_constraintTop_toBottomOf="@id/app_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewModel.email}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_layout_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:hint="@string/login"
             app:layout_constraintBottom_toTopOf="@id/text_layout_password"
-            app:layout_constraintTop_toBottomOf="@id/app_name">
+            app:layout_constraintTop_toBottomOf="@id/text_layout_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_login"
