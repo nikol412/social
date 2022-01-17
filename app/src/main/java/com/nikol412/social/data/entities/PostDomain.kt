@@ -1,4 +1,4 @@
-package com.nikol412.data.entities
+package com.nikol412.social.data.entities
 
 data class PostDomain(
     val items: List<PostItemDomain>,

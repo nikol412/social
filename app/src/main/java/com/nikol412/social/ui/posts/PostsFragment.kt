@@ -16,7 +16,7 @@ class PostsFragment : BaseFragment<FragmentPostsBinding>(FragmentPostsBinding::i
 
     override fun subscribeToObservables() {
         viewModel.postsLD.observe(viewLifecycleOwner) {
-            binding.textView.text = it.firstOrNull()?.text
+//            binding.textView.text = it.firstOrNull()?.text
         }
     }
 }

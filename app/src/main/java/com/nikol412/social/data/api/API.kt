@@ -1,4 +1,4 @@
-package com.nikol412.data.api
+package com.nikol412.social.data.api
 
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
@@ -31,5 +31,5 @@ object API {
             .build()
     }
 
-    val apiService: APIService = getRetrofit().create(APIService::class.java)
+    val apiService: FeedService = getRetrofit().create(FeedService::class.java)
 }
