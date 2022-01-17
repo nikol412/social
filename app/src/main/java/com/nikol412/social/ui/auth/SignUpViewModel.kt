@@ -2,10 +2,9 @@ package com.nikol412.social.ui.auth
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.NavController
-import com.nikol412.data.api.API
-import com.nikol412.domain.models.LoginUserBody
-import com.nikol412.domain.models.RegisterUserBody
+import com.nikol412.social.data.api.API
+import com.nikol412.social.domain.net.models.LoginUserBody
+import com.nikol412.social.domain.net.models.RegisterUserBody
 import com.nikol412.social.ui.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
