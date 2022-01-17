@@ -14,9 +14,16 @@
             android:id="@+id/action_mainFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.nikol412.social.ui.auth.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.nikol412.social.ui.posts.PostsFragment"
+        android:label="PostsFragment" />
+
 </navigation>

@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
 
-private const val BASE_URL = ""
+private const val BASE_URL = "https://network.deta.dev"
 //todo replace base url
 
 fun provideDataModule() = module {

@@ -2,6 +2,7 @@ package com.nikol412.social.ui.auth
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.nikol412.social.R
 import com.nikol412.social.data.api.API
 import com.nikol412.social.ui.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
@@ -11,8 +12,6 @@ class SignUpViewModel : BaseViewModel() {
     val login = MutableLiveData<String>()
     val password = MutableLiveData<String>()
     val email = MutableLiveData("")
-
-    val api by lazy { API.apiService }
 
     fun onSignUpClick() {
         //todo check creds
@@ -47,7 +46,7 @@ class SignUpViewModel : BaseViewModel() {
 //                    )
 //                }
 
-//                navigateTo(R.id.mai)
+                navigateTo(R.id.postsFragment)
             } catch (e: Exception) {
             }
         }
