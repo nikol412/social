@@ -3,12 +3,9 @@ package com.nikol412.social.ui.auth
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.nikol412.social.data.api.API
-import com.nikol412.social.domain.net.models.LoginUserBody
-import com.nikol412.social.domain.net.models.RegisterUserBody
 import com.nikol412.social.ui.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class SignUpViewModel : BaseViewModel() {
     val login = MutableLiveData<String>()
@@ -27,28 +24,28 @@ class SignUpViewModel : BaseViewModel() {
     private fun registerUser(email: String, login: String, password: String) {
         viewModelScope.launch(Dispatchers.Default) {
             try {
-                val userResponse = withContext(Dispatchers.IO) {
-                    api.signUp(
-                        RegisterUserBody(
-                            email,
-                            password,
-                            is_active = true,
-                            is_superuser = true,
-                            is_verified = true,
-                            username = login,
-                            password_confirm = password
-                        )
-                    )
-                }
-
-                val loginResponse = withContext(Dispatchers.IO) {
-                    api.login(
-                        LoginUserBody(
-                            userResponse.username,
-                            password
-                        )
-                    )
-                }
+//                val userResponse = withContext(Dispatchers.IO) {
+//                    api.signUp(
+//                        RegisterUserBody(
+//                            email,
+//                            password,
+//                            is_active = true,
+//                            is_superuser = true,
+//                            is_verified = true,
+//                            username = login,
+//                            password_confirm = password
+//                        )
+//                    )
+//                }
+//
+//                val loginResponse = withContext(Dispatchers.IO) {
+//                    api.login(
+//                        LoginUserBody(
+//                            userResponse.username,
+//                            password
+//                        )
+//                    )
+//                }
 
 //                navigateTo(R.id.mai)
             } catch (e: Exception) {

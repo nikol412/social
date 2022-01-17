@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.nikol412.social.data.net.AuthorizationInterceptor
 import com.nikol412.social.data.net.ServerErrorInterceptor
 import com.nikol412.social.data.net.repositories.FeedRepository
-import com.nikol412.social.domain.net.repositories.IFeedRepository
+import com.nikol412.social.data.net.repositories.IFeedRepository
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

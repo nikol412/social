@@ -1,7 +1,6 @@
 package com.nikol412.social.data.net
 
 import com.google.gson.Gson
-import com.nikol412.social.domain.net.models.exceptions.NoInternetException
 import okhttp3.Interceptor
 import okhttp3.Response
 import org.koin.core.component.KoinComponent
@@ -30,7 +29,9 @@ class ServerErrorInterceptor : Interceptor, KoinComponent {
             }
             return response
         } catch (ex: Exception) {
-            if (ex is UnknownHostException) throw NoInternetException() else throw ex
+//            if (ex is UnknownHostException) throw NoInternetException() else throw ex
+            //todo update net error handling, add not internet exception class
+            throw ex
         }
     }
 }
